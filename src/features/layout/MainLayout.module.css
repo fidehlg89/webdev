@@ -1,0 +1,33 @@
+.layout {
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr;
+  min-height: 100vh;
+}
+
+.mainSection {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  overflow: hidden;
+  transition: grid-template-columns var(--transition-base);
+}
+
+@media (max-width: 768px) {
+  .mainSection {
+    grid-template-columns: 0px 1fr;
+  }
+
+  .layout.sidebarVisible .mainSection {
+    grid-template-columns: var(--sidebar-width) 1fr;
+  }
+
+  /* Target the sidebar component's root class */
+  .layout.sidebarVisible .mainSection>aside {
+    transform: translateX(0);
+  }
+}
+
+.content {
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  background-color: var(--bg-gray);
+  overflow-y: auto;
+}

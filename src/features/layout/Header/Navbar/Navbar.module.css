@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuIcon,
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--dark-navy);
+  border-radius: 1px;
+  transition: var(--transition-fast);
+}
+
+.menuIcon {
+  position: relative;
+}
+
+.menuIcon::before {
+  position: absolute;
+  top: -8px;
+}
+
+.menuIcon::after {
+  position: absolute;
+  top: 8px;
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: flex;
+  }
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+}
