@@ -25,9 +25,7 @@ const Section = ({
       >
         <h3 className={styles.title}>{title}</h3>
         {collapsible && (
-          <span className={`${styles.icon} ${isOpen ? styles.iconOpen : ''}`}>
-            {isOpen ? '—' : '+'}
-          </span>
+          <span className={`${styles.icon} ${isOpen ? styles.iconOpen : ''}`} aria-hidden="true"></span>
         )}
       </div>
       {isOpen && <div className={styles.content}>{children}</div>}

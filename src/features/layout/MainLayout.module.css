@@ -11,23 +11,45 @@
   transition: grid-template-columns var(--transition-base);
 }
 
-@media (max-width: 768px) {
+.content {
+  padding: var(--spacing-xl);
+  background-color: var(--bg-gray);
+  overflow-y: auto;
+}
+
+/* Tablet & Mobile Breakpoint (Unified at 1024px) */
+@media (max-width: 1024px) {
   .mainSection {
     grid-template-columns: 1fr;
+    display: block;
+    /* Ensure no grid conflicts with absolute elements */
+    position: relative;
   }
 
   .layout.sidebarVisible .mainSection {
     grid-template-columns: 1fr;
   }
 
-  /* Target the sidebar component's root class */
+  /* When sidebar is open, it overlays, so we don't shift content */
   .layout.sidebarVisible .mainSection>aside {
     transform: translateX(0);
   }
+
+  .content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    width: 100%;
+  }
 }
 
-.content {
-  padding: var(--spacing-2xl) var(--spacing-xl);
-  background-color: var(--bg-gray);
-  overflow-y: auto;
+/* Mobile Specific Polish */
+@media (max-width: 768px) {
+  .content {
+    padding: 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .content {
+    padding: 40px 60px;
+  }
 }

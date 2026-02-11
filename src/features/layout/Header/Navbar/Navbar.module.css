@@ -43,13 +43,25 @@
   top: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .menuButton {
     display: flex;
   }
 }
 
+/* Transformation: Hamburger to X */
+.menuButton.isOpen .menuIcon {
+  background-color: transparent;
+}
+
+.menuButton.isOpen .menuIcon::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menuButton.isOpen .menuIcon::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 .logo {
-  height: 24px;
-  width: auto;
+  width: 220px;
 }

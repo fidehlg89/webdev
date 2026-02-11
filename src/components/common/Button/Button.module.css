@@ -2,14 +2,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 9999px;
-  /* Pill shape */
-  font-weight: 700;
+  border-radius: var(--radius-full, 9999px);
+  font-weight: var(--font-weight-bold);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all var(--transition-base);
   border: 1px solid transparent;
   outline: none;
-  font-size: 13px;
+  font-size: var(--font-size-lg);
   letter-spacing: 0.02em;
 }
 
@@ -20,24 +19,32 @@
 
 /* Variants */
 .primary {
-  background-color: #00aeef;
-  color: #ffffff;
-  padding: 12px 60px;
+  background-color: var(--primary);
+  color: var(--text-inverse);
+  padding: 18px 120px;
   text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
 }
 
 .primary:hover:not(:disabled) {
-  background-color: #0098d1;
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .outline {
-  background-color: #ffffff;
-  border-color: #dee2e6;
-  color: #666666;
-  padding: 12px 60px;
+  background-color: white;
+  border-color: var(--border-light);
+  color: var(--text-muted);
+  padding: 18px 120px;
 }
 
 .outline:hover:not(:disabled) {
-  background-color: #f8f9fa;
-  border-color: #ced4da;
+  background-color: var(--bg-app);
+  border-color: var(--text-muted);
+  color: var(--text-main);
 }

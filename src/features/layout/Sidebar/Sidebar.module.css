@@ -10,7 +10,8 @@
   transition: transform var(--transition-base);
 }
 
-@media (max-width: 768px) {
+/* Tablet & Mobile: Off-canvas sidebar */
+@media (max-width: 1024px) {
   .sidebar {
     position: fixed;
     left: 0;
@@ -21,6 +22,8 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease;
   }
+
+  /* When sidebar is visible in mobile mode, MainLayout will apply sidebarVisible class */
 }
 
 .nav {
@@ -38,6 +41,7 @@
   position: relative;
   list-style: none;
   transition: var(--transition-fast);
+  padding: 0 var(--spacing-md);
 }
 
 .navButton {

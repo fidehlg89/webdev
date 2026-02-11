@@ -1,68 +1,41 @@
 .container {
-  padding: 40px 60px;
-  max-width: 1400px;
-  margin: 0;
-  background-color: #f8f9fa;
+  padding: 20px var(--spacing-xl);
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: var(--bg-gray);
   min-height: 100%;
 }
 
 .header {
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing-xl);
 }
 
 .title {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 400;
-  color: #343d4e;
+  color: var(--dark-navy);
+  letter-spacing: -0.02em;
 }
 
-.formContent {
-  background-color: #ffffff;
-  padding: 0;
-  border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
-  overflow: hidden;
-}
-
-.checkboxGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.fieldGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 60px;
-  row-gap: 30px;
-}
-
-.formFooter {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  padding-top: 20px;
-}
-
+/* Responsiveness */
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
+    padding: var(--spacing-md);
   }
 
-  .fieldGrid {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    row-gap: 20px;
+  .header {
+    margin-bottom: var(--spacing-md);
   }
 
-  .formFooter {
-    flex-direction: column-reverse;
-    gap: 15px;
+  .title {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    text-align: left;
   }
+}
 
-  .formFooter button {
-    width: 100%;
-    padding: 12px 20px !important;
+@media (min-width: 1440px) {
+  .container {
+    padding: 0;
   }
 }

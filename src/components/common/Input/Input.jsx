@@ -4,6 +4,7 @@ import styles from './Input.module.css';
 
 const Input = ({ label, error, className = '', id, ...props }) => {
   const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, '-') : undefined);
+  const errorId = error ? `${inputId}-error` : undefined;
 
   return (
     <div className={`${styles.inputWrapper} ${className}`}>
@@ -15,9 +16,15 @@ const Input = ({ label, error, className = '', id, ...props }) => {
       <input
         id={inputId}
         className={`${styles.input} ${error ? styles.inputError : ''}`}
+        aria-invalid={!!error}
+        aria-describedby={errorId}
         {...props}
       />
-      {error && <span className={styles.errorMessage}>{error}</span>}
+      {error && (
+        <span id={errorId} className={styles.errorMessage} role="alert">
+          {error}
+        </span>
+      )}
     </div>
   );
 };

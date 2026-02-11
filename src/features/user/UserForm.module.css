@@ -1,0 +1,69 @@
+.formContent {
+  padding: 0;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  overflow: visible;
+  padding-bottom: 15px;
+  /* Extra space for potential error at the bottom row */
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 60px;
+  row-gap: 16px;
+}
+
+/* Force Telefone (3rd item) to the second row, leaving 3rd column empty on desktop */
+.fieldGrid>div:nth-child(3) {
+  grid-column: 1;
+}
+
+.formFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  padding: 32px 0;
+  margin-top: 16px;
+}
+
+/* Tablet & Mobile Breakpoints */
+@media (max-width: 1200px) {
+  .fieldGrid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+  }
+
+  .fieldGrid>div:nth-child(3) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .fieldGrid {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .fieldGrid>div:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .formFooter {
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .formFooter button {
+    width: 100%;
+    height: 48px;
+    padding: 0 !important;
+  }
+}

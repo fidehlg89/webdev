@@ -4,12 +4,12 @@ import styles from './Navbar.module.css'
 import { useUI } from '@/context/UIContext'
 
 const Navbar = () => {
-  const { toggleSidebar } = useUI()
+  const { toggleSidebar, isSidebarVisible } = useUI()
 
   return (
     <nav className={styles.navbar}>
       <button
-        className={styles.menuButton}
+        className={`${styles.menuButton} ${isSidebarVisible ? styles.isOpen : ''}`}
         onClick={toggleSidebar}
         aria-label="Toggle Menu"
       >

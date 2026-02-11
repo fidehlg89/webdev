@@ -1,46 +1,72 @@
 .section {
-  background: var(--white);
-  border-radius: 0;
-  border: none;
-  overflow: visible;
-  margin-bottom: var(--spacing-xl);
-  box-shadow: none;
+  margin-bottom: 0;
 }
 
 .header {
-  padding: 10px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eceff1;
-  border-bottom: none;
+  background-color: var(--section-header-bg);
+  padding: 1.25rem var(--spacing-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.header:hover {
+  background-color: #f2f2f2;
 }
 
 .title {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   color: #333333;
-  text-transform: none;
 }
 
 .icon {
-  font-size: 1.5rem;
-  color: #333333;
-  font-weight: 300;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  transition: transform var(--transition-base);
+}
+
+.icon::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #333333;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.iconOpen::after {
+  transform: rotate(90deg);
+  opacity: 0;
 }
 
 .content {
-  padding: var(--spacing-xl) var(--spacing-2xl);
+  padding: var(--spacing-xl) var(--spacing-3xl);
+  background-color: var(--bg-white);
+  animation: fadeIn var(--transition-slow) both;
 }
 
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+/* Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    padding: var(--spacing-md);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .content {
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 }

@@ -3,39 +3,66 @@
   flex-direction: column;
   gap: var(--spacing-xs);
   width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+  /* Restored reserved space for error message */
 }
 
 .label {
-  font-size: 11px;
-  font-weight: 700;
-  color: #7d8ea3;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-muted);
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
   margin-bottom: 4px;
 }
 
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
 .input {
-  padding: 8px 0;
+  width: 100%;
+  padding: 10px 0;
   border: none;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 2px solid #2c2c2d;
   background-color: transparent;
-  color: #333333;
-  transition: border-color 0.2s;
-  font-size: 14px;
+  color: var(--text-main);
+  transition: all var(--transition-base);
+  font-size: 16px;
+  border-radius: 0;
+  outline: none;
+}
+
+.input:focus {
+  border-bottom-color: var(--primary);
 }
 
 .input:focus {
   outline: none;
-  border-bottom-color: var(--primary);
+  border-bottom: 2px solid var(--primary);
 }
 
 .input::placeholder {
-  color: var(--text-sidebar);
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 .inputError {
-  border-color: #e53e3e;
+  border-bottom-color: var(--error);
 }
 
 .errorMessage {
   font-size: var(--font-size-xs);
-  color: #e53e3e;
+  color: var(--error);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
