@@ -56,16 +56,16 @@ h6 {
   min-height: 100%;
 }
 
-/* Global Scrollbar Styles - Premium Feel */
+/* Global Scrollbar Styles - Ultra Subtle */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 transparent;
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  /* Narrower for premium look */
-  height: 6px;
+  width: 5px;
+  /* Even thinner */
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -73,11 +73,17 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background-color: rgba(0, 0, 0, 0.05);
+  /* Nearly invisible */
   border-radius: 10px;
-  transition: background 0.2s ease;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  /* Appears on hover */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-sidebar);
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Darkens when directly hovered */
 }
