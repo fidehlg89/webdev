@@ -46,8 +46,8 @@
 
 .navButton {
   width: 100%;
-  padding: calc(var(--spacing-md) * 1.2) var(--spacing-xl);
-  font-size: 20px;
+  padding: calc(var(--spacing-md) * 0.8) var(--spacing-xl);
+  font-size: 18px;
   font-weight: 400;
   text-align: left;
   background: transparent;
@@ -76,7 +76,7 @@
 
 .footer {
   padding: var(--spacing-lg) var(--spacing-xl);
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;

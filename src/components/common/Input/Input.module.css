@@ -28,7 +28,7 @@
   width: 100%;
   padding: 10px 0;
   border: none;
-  border-bottom: 2px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
   background-color: transparent;
   color: var(--text-main);
   transition: all var(--transition-base);
