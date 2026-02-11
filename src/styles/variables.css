@@ -1,17 +1,15 @@
 :root {
   /* Colors */
-  --primary-cyan: #00aeef;
-  --primary-cyan-hover: #0098d1;
-  /* New Colors - Cleaner Palette */
   --primary: #00aeef;
+  --primary-hover: #0098d1;
   --success: #38b2ac;
   --info: #00aeef;
-  --border-clean: #dee2e6;
-  --bg-clean: #f4f7f9;
+  --bg-clean: #f8f9fa;
+  /* Lighter background for main area */
   --bg-white: #ffffff;
 
   --dark-navy: #343d4e;
-  --dark-navy-content: #3a4559;
+  --dark-navy-active: #3a4559;
   --bg-gray: #f4f7f9;
   --white: #ffffff;
 
@@ -63,7 +61,7 @@
   /* 48px */
 
   /* Layout */
-  --sidebar-width: 260px;
+  --sidebar-width: 320px;
   --header-height: 64px;
 
   /* Effects */

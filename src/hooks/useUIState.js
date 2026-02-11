@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 
 export const useUIState = () => {
-  const [activeItem, setActiveItem] = useState('Dashboard');
+  const [activeItem, setActiveItem] = useState('Utilizador');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = useCallback(() => {

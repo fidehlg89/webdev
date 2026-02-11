@@ -62,16 +62,15 @@ const UserView = ({
               error={errors.phone}
             />
           </div>
+          <footer className={styles.formFooter}>
+            <Button variant="outline" type="button" onClick={onCancel}>
+              Cancelar
+            </Button>
+            <Button variant="primary" type="submit">
+              GUARDAR
+            </Button>
+          </footer>
         </Section>
-
-        <footer className={styles.formFooter}>
-          <Button variant="outline" type="button" onClick={onCancel}>
-            Cancelar
-          </Button>
-          <Button variant="primary" type="submit">
-            GUARDAR
-          </Button>
-        </footer>
       </form>
     </div>
   );

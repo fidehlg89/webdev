@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
       <nav className={styles.nav}>
-        <ul>
+        <ul className={styles.navList}>
           {navItems.map((item, index) => (
             <li key={`${index + item}`} className={`${styles.navItem} ${item === activeItem ? styles.active : ''}`}>
               <button
@@ -23,7 +23,7 @@ const Sidebar = () => {
         </ul>
       </nav>
       <footer className={styles.footer}>
-        2019© Premium-minds.com
+        2019<sup style={{ verticalAlign: 'baseline', position: 'relative', top: '-0.3em', fontSize: '12px' }}>®</sup> Premium-minds.com
       </footer>
     </aside>
   )
