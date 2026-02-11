@@ -7,7 +7,7 @@
 }
 
 .header {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 16px;
 }
 
 .title {

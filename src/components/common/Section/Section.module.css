@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--section-header-bg);
-  padding: 1.25rem var(--spacing-xl);
+  padding: 12px var(--spacing-xl);
   cursor: pointer;
   transition: all var(--transition-base);
 }
@@ -55,7 +55,7 @@
 }
 
 .content {
-  padding: var(--spacing-xl) var(--spacing-3xl);
+  padding: 20px var(--spacing-3xl);
   background-color: var(--bg-white);
   animation: fadeIn var(--transition-slow) both;
 }

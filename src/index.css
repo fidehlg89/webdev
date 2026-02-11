@@ -56,34 +56,17 @@ h6 {
   min-height: 100%;
 }
 
-/* Global Scrollbar Styles - Ultra Subtle */
+/* Global Scrollbar Suppression - Stealth UI */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  /* Even thinner */
-  height: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.05);
-  /* Nearly invisible */
-  border-radius: 10px;
-}
-
-*:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.15);
-  /* Appears on hover */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-  /* Darkens when directly hovered */
+  display: none;
+  /* Chrome/Safari/Blink */
+  width: 0;
+  height: 0;
 }
