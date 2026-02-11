@@ -7,9 +7,17 @@
   cursor: pointer;
   transition: all var(--transition-base);
   border: 1px solid transparent;
-  outline: none;
   font-size: var(--font-size-lg);
   letter-spacing: 0.02em;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bg-white), 0 0 0 4px var(--primary);
 }
 
 .btn:disabled {

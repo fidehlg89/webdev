@@ -1942,13 +1942,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ometa@npm:0.2.2":
-  version: 0.2.2
-  resolution: "ometa@npm:0.2.2"
-  checksum: 10c0/6d834b01cf92e5020c63d9a2c2cbfa131b7e03c1ce78cbac42263e93a57dd33d3d8f10c96d8bce4721513f1d09e147891ac33951da6ea1c77d14cca3eb652283
-  languageName: node
-  linkType: hard
-
 "optionator@npm:^0.9.3":
   version: 0.9.4
   resolution: "optionator@npm:0.9.4"
@@ -2238,15 +2231,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scss@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "scss@npm:0.2.4"
-  dependencies:
-    ometa: "npm:0.2.2"
-  checksum: 10c0/41aa26a7d6baaa1b264c3bc6005f865ceb895050ef62563368491db12b63fda7fc73a46dbe129f68255abdc8aab9c6ef83f8a5dfda0f57857e8cf96846e92f3e
-  languageName: node
-  linkType: hard
-
 "semver@npm:^6.3.1":
   version: 6.3.1
   resolution: "semver@npm:6.3.1"
@@ -2484,7 +2468,6 @@ __metadata:
     prop-types: "npm:^15.8.1"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
-    scss: "npm:^0.2.4"
     vite: "npm:^7.3.1"
   languageName: unknown
   linkType: soft

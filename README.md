@@ -1,16 +1,49 @@
-# React + Vite
+# Premium Minds - User Management WebDev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+User management interface built with React 19 and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18+)
+- [Yarn](https://yarnpkg.com/) (v4+)
 
-## React Compiler
+### Installation
+```bash
+# Clone the repository (if applicable)
+# Navigate to the project directory
+cd webdev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Install dependencies
+yarn install
+```
 
-## Expanding the ESLint configuration
+### Development
+```bash
+# Start the development server
+yarn dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Production
+```bash
+# Build for production
+yarn build
+
+# Preview production build
+yarn preview
+```
+
+## 🛠 Tech Stack
+- **Framework**: React 19 (Functional Components, Hooks)
+- **Tooling**: Vite (Ultra-fast HMR)
+- **Styling**: Vanilla CSS Modules (Scoped styles, Native Variables)
+- **Context API**: Global state management (UI, Auth if needed)
+
+## 📂 Architecture
+The project follows a **Feature-based architecture** for better scalability:
+- `/src/components/common`: Shared atomic UI components (Button, Input, Checkbox, Section).
+- `/src/features`: Domain-specific features (Layout, User Management).
+- `/src/styles`: Global themes, resets, and design tokens (variables.css).
+- `/src/hooks`: Custom React hooks for shared logic.
+
+
