@@ -13,6 +13,8 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
+  /* Prevent browser-level scroll */
 }
 
 body {
@@ -52,4 +54,30 @@ h6 {
 #root {
   isolation: isolate;
   min-height: 100%;
+}
+
+/* Global Scrollbar Styles - Premium Feel */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  /* Narrower for premium look */
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-sidebar);
 }
