@@ -13,11 +13,11 @@
 
 @media (max-width: 768px) {
   .mainSection {
-    grid-template-columns: 0px 1fr;
+    grid-template-columns: 1fr;
   }
 
   .layout.sidebarVisible .mainSection {
-    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-columns: 1fr;
   }
 
   /* Target the sidebar component's root class */

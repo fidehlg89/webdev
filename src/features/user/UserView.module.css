@@ -47,10 +47,22 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: var(--spacing-md);
+    padding: 20px;
+  }
+
+  .fieldGrid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 20px;
   }
 
   .formFooter {
     flex-direction: column-reverse;
+    gap: 15px;
+  }
+
+  .formFooter button {
+    width: 100%;
+    padding: 12px 20px !important;
   }
 }
