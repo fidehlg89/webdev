@@ -26,7 +26,7 @@
 
 .input {
   width: 100%;
-  padding: 10px 0;
+  padding: 8px 6px;
   border: none;
   border-bottom: 1px solid var(--border-dark);
   background-color: transparent;
@@ -39,7 +39,7 @@
 
 .input:focus {
   outline: none;
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
 }
 
 .input::placeholder {

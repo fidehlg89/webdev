@@ -29,7 +29,7 @@
 .primary {
   background-color: var(--primary);
   color: var(--text-inverse);
-  padding: 18px 120px;
+  padding: 10px 120px;
   text-transform: uppercase;
   box-shadow: var(--shadow-sm);
 }

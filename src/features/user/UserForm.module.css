@@ -1,10 +1,7 @@
 .formContent {
   padding: 0;
   border-radius: 2px;
-  margin-bottom: 20px;
   overflow: visible;
-  padding-bottom: 15px;
-  /* Extra space for potential error at the bottom row */
 }
 
 .checkboxGroup {
@@ -16,9 +13,9 @@
 .fieldGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: var(--spacing-3xl);
-  /* 48px to 60px adjustment */
-  row-gap: var(--spacing-md);
+  column-gap: var(--spacing-xl);
+  /* Reduced from 3xl to fit 3 cols comfortably */
+  row-gap: var(--spacing-xs);
 }
 
 /* Force Telefone (3rd item) to the second row, leaving 3rd column empty on desktop */
@@ -30,6 +27,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 24px;
+  padding: 8px 0;
   margin-top: 60px;
 }
 
