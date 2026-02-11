@@ -1,15 +1,8 @@
-import {useState} from 'react'
 import styles from './Sidebar.module.css'
-
-const navItems = [
-  { label: 'Lorem Ipsum', link: '#' },
-  { label: 'Utilizador', link: '#' },
-  { label: 'Quantum solum', link: '#' },
-  { label: 'Marcus Tremer', link: '#' },
-];
+import { useUI } from '@/context/UIContext'
 
 const Sidebar = () => {
-  const [activeItem, setActiveItem] = useState('Utilizador');
+  const { activeItem, setActiveItem } = useUI()
   const navItems = ['Lorem Ipsum', 'Utilizador', 'Quantum solum', 'Marcus Tremer'];
 
   return (

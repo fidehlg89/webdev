@@ -1,0 +1,53 @@
+.section {
+  background: var(--white);
+  border-radius: 0;
+  border: none;
+  overflow: visible;
+  margin-bottom: var(--spacing-xl);
+  box-shadow: none;
+}
+
+.header {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f3f5;
+  border-bottom: none;
+}
+
+.collapsible {
+  cursor: pointer;
+}
+
+.title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: #4a5568;
+  margin: 0;
+}
+
+.icon {
+  font-size: 1.25rem;
+  color: #2d3748;
+  transition: transform var(--transition-fast);
+  user-select: none;
+  width: 20px;
+  text-align: center;
+}
+
+.content {
+  padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

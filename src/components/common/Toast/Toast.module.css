@@ -1,0 +1,62 @@
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  animation: slideIn var(--transition-base);
+  min-width: 300px;
+}
+
+.message {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.25rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+.success {
+  background-color: var(--success);
+}
+
+.error {
+  background-color: #e53e3e;
+}
+
+.info {
+  background-color: var(--info);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,17 +1,12 @@
 import Navbar from './Navbar/Navbar'
 import styles from './Header.module.css'
-import PropTypes from 'prop-types'
 
-const Header = ({onToggleSidebar}) => {
+const Header = () => {
   return (
     <header className={styles.header}>
-      <Navbar onToggleSidebar={onToggleSidebar} />
+      <Navbar />
     </header>
   )
-}
-
-Header.propTypes = {
-  onToggleSidebar: PropTypes.func
 }
 
 export default Header
